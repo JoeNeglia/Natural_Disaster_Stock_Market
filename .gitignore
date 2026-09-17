@@ -1,0 +1,9 @@
+# Ignore specific test file patterns (e.g., sample.test.js, sample.spec.ts)
+*.test.*
+*.spec.*
+
+#Ignore the SP500 dataset zip and unzipped. Over 100 mb. Can't store in Github
+SP500Last25Years.zip
+/SP500Last25Years
+
+# For removing local files and folders edit the local .git/info/exclude file
