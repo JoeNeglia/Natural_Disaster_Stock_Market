@@ -1,1 +1,0 @@
-### Going to be working on building a visualization that takes in the hurricane, creates a visualization for the stock market indicators during that time period using the Yahoo finance API when given a start and end date of the hurricane, and will visualize the hurricane through a simulation as well.
