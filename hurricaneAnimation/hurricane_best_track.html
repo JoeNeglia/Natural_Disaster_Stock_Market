@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d125008eeaa5a5d0b7e05295ad3acb48 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d125008eeaa5a5d0b7e05295ad3acb48" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d125008eeaa5a5d0b7e05295ad3acb48 = L.map(
+                "map_d125008eeaa5a5d0b7e05295ad3acb48",
+                {
+                    center: [20.0, -60.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ae8e0380e49be5f055d8f5d107eed84f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ae8e0380e49be5f055d8f5d107eed84f.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_a676ef2620f687cd173a610c31dacb23_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a676ef2620f687cd173a610c31dacb23 = L.geoJson(null, {
+                onEachFeature: geo_json_a676ef2620f687cd173a610c31dacb23_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_a676ef2620f687cd173a610c31dacb23_add (data) {
+            geo_json_a676ef2620f687cd173a610c31dacb23
+                .addData(data);
+        }
+            geo_json_a676ef2620f687cd173a610c31dacb23_add({"features": [{"geometry": {"coordinates": [-81.7, 17.2, 0.0], "type": "Point"}, "id": "0", "properties": {"Name": "1200 UTC SEP 23", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eDB NINE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 23\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e17.2 N, -81.7 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1004 mb; 29.64 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e30 knots;  35 mph;  56 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_a676ef2620f687cd173a610c31dacb23.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_a676ef2620f687cd173a610c31dacb23.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_91b5337443622529e35741b076f6cc5b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_91b5337443622529e35741b076f6cc5b = L.geoJson(null, {
+                onEachFeature: geo_json_91b5337443622529e35741b076f6cc5b_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_91b5337443622529e35741b076f6cc5b_add (data) {
+            geo_json_91b5337443622529e35741b076f6cc5b
+                .addData(data);
+        }
+            geo_json_91b5337443622529e35741b076f6cc5b_add({"features": [{"geometry": {"coordinates": [-81.9, 17.8, 0.0], "type": "Point"}, "id": "1", "properties": {"Name": "1800 UTC SEP 23", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eDB NINE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 23\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e17.8 N, -81.9 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1004 mb; 29.64 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e35 knots;  40 mph;  65 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_91b5337443622529e35741b076f6cc5b.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_91b5337443622529e35741b076f6cc5b.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_ac8a1dda62bca145fca81731cc1daf05_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ac8a1dda62bca145fca81731cc1daf05 = L.geoJson(null, {
+                onEachFeature: geo_json_ac8a1dda62bca145fca81731cc1daf05_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_ac8a1dda62bca145fca81731cc1daf05_add (data) {
+            geo_json_ac8a1dda62bca145fca81731cc1daf05
+                .addData(data);
+        }
+            geo_json_ac8a1dda62bca145fca81731cc1daf05_add({"features": [{"geometry": {"coordinates": [-82.2, 18.2, 0.0], "type": "Point"}, "id": "2", "properties": {"Name": "0000 UTC SEP 24", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eDB NINE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0000 UTC SEP 24\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e18.2 N, -82.2 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1002 mb; 29.58 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e35 knots;  40 mph;  65 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_ac8a1dda62bca145fca81731cc1daf05.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_ac8a1dda62bca145fca81731cc1daf05.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_4cd27384af629c0a8c8187f1484ff80d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4cd27384af629c0a8c8187f1484ff80d = L.geoJson(null, {
+                onEachFeature: geo_json_4cd27384af629c0a8c8187f1484ff80d_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_4cd27384af629c0a8c8187f1484ff80d_add (data) {
+            geo_json_4cd27384af629c0a8c8187f1484ff80d
+                .addData(data);
+        }
+            geo_json_4cd27384af629c0a8c8187f1484ff80d_add({"features": [{"geometry": {"coordinates": [-82.8, 18.6, 0.0], "type": "Point"}, "id": "3", "properties": {"Name": "0600 UTC SEP 24", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eDB NINE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0600 UTC SEP 24\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e18.6 N, -82.8 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1001 mb; 29.55 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e35 knots;  40 mph;  65 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_4cd27384af629c0a8c8187f1484ff80d.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_4cd27384af629c0a8c8187f1484ff80d.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_aac951696767eba439bc82dc3506aa48_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_aac951696767eba439bc82dc3506aa48 = L.geoJson(null, {
+                onEachFeature: geo_json_aac951696767eba439bc82dc3506aa48_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_aac951696767eba439bc82dc3506aa48_add (data) {
+            geo_json_aac951696767eba439bc82dc3506aa48
+                .addData(data);
+        }
+            geo_json_aac951696767eba439bc82dc3506aa48_add({"features": [{"geometry": {"coordinates": [-83.7, 19.2, 0.0], "type": "Point"}, "id": "4", "properties": {"Name": "1200 UTC SEP 24", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 24\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e19.2 N, -83.7 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e999 mb; 29.50 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e40 knots;  46 mph;  74 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_aac951696767eba439bc82dc3506aa48.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_aac951696767eba439bc82dc3506aa48.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_60229ea17c63914952d76257752e2db0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_60229ea17c63914952d76257752e2db0 = L.geoJson(null, {
+                onEachFeature: geo_json_60229ea17c63914952d76257752e2db0_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_60229ea17c63914952d76257752e2db0_add (data) {
+            geo_json_60229ea17c63914952d76257752e2db0
+                .addData(data);
+        }
+            geo_json_60229ea17c63914952d76257752e2db0_add({"features": [{"geometry": {"coordinates": [-84.6, 19.4, 0.0], "type": "Point"}, "id": "5", "properties": {"Name": "1800 UTC SEP 24", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 24\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e19.4 N, -84.6 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e997 mb; 29.44 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e45 knots;  52 mph;  83 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_60229ea17c63914952d76257752e2db0.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_60229ea17c63914952d76257752e2db0.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_4bc8a55099f721871d971f5267ed31fa_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4bc8a55099f721871d971f5267ed31fa = L.geoJson(null, {
+                onEachFeature: geo_json_4bc8a55099f721871d971f5267ed31fa_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_4bc8a55099f721871d971f5267ed31fa_add (data) {
+            geo_json_4bc8a55099f721871d971f5267ed31fa
+                .addData(data);
+        }
+            geo_json_4bc8a55099f721871d971f5267ed31fa_add({"features": [{"geometry": {"coordinates": [-85.2, 19.7, 0.0], "type": "Point"}, "id": "6", "properties": {"Name": "0000 UTC SEP 25", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0000 UTC SEP 25\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e19.7 N, -85.2 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e990 mb; 29.23 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e50 knots;  58 mph;  93 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_4bc8a55099f721871d971f5267ed31fa.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_4bc8a55099f721871d971f5267ed31fa.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_ab3a66e7896a38b9e0f42f283d853524_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ab3a66e7896a38b9e0f42f283d853524 = L.geoJson(null, {
+                onEachFeature: geo_json_ab3a66e7896a38b9e0f42f283d853524_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_ab3a66e7896a38b9e0f42f283d853524_add (data) {
+            geo_json_ab3a66e7896a38b9e0f42f283d853524
+                .addData(data);
+        }
+            geo_json_ab3a66e7896a38b9e0f42f283d853524_add({"features": [{"geometry": {"coordinates": [-85.9, 20.3, 0.0], "type": "Point"}, "id": "7", "properties": {"Name": "0600 UTC SEP 25", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0600 UTC SEP 25\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e20.3 N, -85.9 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e985 mb; 29.08 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e55 knots;  63 mph;  102 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_ab3a66e7896a38b9e0f42f283d853524.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_ab3a66e7896a38b9e0f42f283d853524.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_78b12c8c37087a4fe83ea3e867b2792a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_78b12c8c37087a4fe83ea3e867b2792a = L.geoJson(null, {
+                onEachFeature: geo_json_78b12c8c37087a4fe83ea3e867b2792a_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_78b12c8c37087a4fe83ea3e867b2792a_add (data) {
+            geo_json_78b12c8c37087a4fe83ea3e867b2792a
+                .addData(data);
+        }
+            geo_json_78b12c8c37087a4fe83ea3e867b2792a_add({"features": [{"geometry": {"coordinates": [-86.2, 21.1, 0.0], "type": "Point"}, "id": "8", "properties": {"Name": "1200 UTC SEP 25", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 25\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e21.1 N, -86.2 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e979 mb; 28.90 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e65 knots;  75 mph;  120 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_78b12c8c37087a4fe83ea3e867b2792a.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_78b12c8c37087a4fe83ea3e867b2792a.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_1d79ecbc35911da2ed4622d2341570f6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1d79ecbc35911da2ed4622d2341570f6 = L.geoJson(null, {
+                onEachFeature: geo_json_1d79ecbc35911da2ed4622d2341570f6_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_1d79ecbc35911da2ed4622d2341570f6_add (data) {
+            geo_json_1d79ecbc35911da2ed4622d2341570f6
+                .addData(data);
+        }
+            geo_json_1d79ecbc35911da2ed4622d2341570f6_add({"features": [{"geometry": {"coordinates": [-86.5, 22.0, 0.0], "type": "Point"}, "id": "9", "properties": {"Name": "1800 UTC SEP 25", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 25\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e22.0 N, -86.5 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e978 mb; 28.88 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e70 knots;  81 mph;  130 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_1d79ecbc35911da2ed4622d2341570f6.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_1d79ecbc35911da2ed4622d2341570f6.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_ad98134b4f751c1a47edd14067002ace_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ad98134b4f751c1a47edd14067002ace = L.geoJson(null, {
+                onEachFeature: geo_json_ad98134b4f751c1a47edd14067002ace_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_ad98134b4f751c1a47edd14067002ace_add (data) {
+            geo_json_ad98134b4f751c1a47edd14067002ace
+                .addData(data);
+        }
+            geo_json_ad98134b4f751c1a47edd14067002ace_add({"features": [{"geometry": {"coordinates": [-86.7, 22.8, 0.0], "type": "Point"}, "id": "10", "properties": {"Name": "0000 UTC SEP 26", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0000 UTC SEP 26\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e22.8 N, -86.7 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e973 mb; 28.73 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e70 knots;  81 mph;  130 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_ad98134b4f751c1a47edd14067002ace.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_ad98134b4f751c1a47edd14067002ace.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f = L.geoJson(null, {
+                onEachFeature: geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f_add (data) {
+            geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f
+                .addData(data);
+        }
+            geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f_add({"features": [{"geometry": {"coordinates": [-86.5, 23.6, 0.0], "type": "Point"}, "id": "11", "properties": {"Name": "0600 UTC SEP 26", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0600 UTC SEP 26\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e23.6 N, -86.5 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e970 mb; 28.64 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e75 knots;  86 mph;  139 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_ab32f9d0b2dbd7fdba6fd1fef712000f.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_d6b290a3a20550213286d543766a7c29_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d6b290a3a20550213286d543766a7c29 = L.geoJson(null, {
+                onEachFeature: geo_json_d6b290a3a20550213286d543766a7c29_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_d6b290a3a20550213286d543766a7c29_add (data) {
+            geo_json_d6b290a3a20550213286d543766a7c29
+                .addData(data);
+        }
+            geo_json_d6b290a3a20550213286d543766a7c29_add({"features": [{"geometry": {"coordinates": [-85.8, 24.7, 0.0], "type": "Point"}, "id": "12", "properties": {"Name": "1200 UTC SEP 26", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 26\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e24.7 N, -85.8 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e963 mb; 28.43 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e85 knots;  98 mph;  157 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_d6b290a3a20550213286d543766a7c29.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_d6b290a3a20550213286d543766a7c29.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_d370074c2aedd520463bd92e1b25d184_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d370074c2aedd520463bd92e1b25d184 = L.geoJson(null, {
+                onEachFeature: geo_json_d370074c2aedd520463bd92e1b25d184_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_d370074c2aedd520463bd92e1b25d184_add (data) {
+            geo_json_d370074c2aedd520463bd92e1b25d184
+                .addData(data);
+        }
+            geo_json_d370074c2aedd520463bd92e1b25d184_add({"features": [{"geometry": {"coordinates": [-85.0, 26.6, 0.0], "type": "Point"}, "id": "13", "properties": {"Name": "1800 UTC SEP 26", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 26\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e26.6 N, -85.0 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e958 mb; 28.28 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e105 knots;  121 mph;  194 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_d370074c2aedd520463bd92e1b25d184.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_d370074c2aedd520463bd92e1b25d184.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_eda82a77fcff4eff1a01bd46d1ba5e30_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_eda82a77fcff4eff1a01bd46d1ba5e30 = L.geoJson(null, {
+                onEachFeature: geo_json_eda82a77fcff4eff1a01bd46d1ba5e30_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_eda82a77fcff4eff1a01bd46d1ba5e30_add (data) {
+            geo_json_eda82a77fcff4eff1a01bd46d1ba5e30
+                .addData(data);
+        }
+            geo_json_eda82a77fcff4eff1a01bd46d1ba5e30_add({"features": [{"geometry": {"coordinates": [-84.3, 28.7, 0.0], "type": "Point"}, "id": "14", "properties": {"Name": "0000 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0000 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e28.7 N, -84.3 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e941 mb; 27.78 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e120 knots;  138 mph;  222 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_eda82a77fcff4eff1a01bd46d1ba5e30.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_eda82a77fcff4eff1a01bd46d1ba5e30.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_0bedb062ab84f8537426dbcf1398e979_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0bedb062ab84f8537426dbcf1398e979 = L.geoJson(null, {
+                onEachFeature: geo_json_0bedb062ab84f8537426dbcf1398e979_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_0bedb062ab84f8537426dbcf1398e979_add (data) {
+            geo_json_0bedb062ab84f8537426dbcf1398e979
+                .addData(data);
+        }
+            geo_json_0bedb062ab84f8537426dbcf1398e979_add({"features": [{"geometry": {"coordinates": [-83.5, 30.8, 0.0], "type": "Point"}, "id": "15", "properties": {"Name": "0500 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0500 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e30.8 N, -83.5 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e947 mb; 27.96 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e95 knots;  109 mph;  176 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_0bedb062ab84f8537426dbcf1398e979.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_0bedb062ab84f8537426dbcf1398e979.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_7c3f8cfc61e808cd63156e7306bb96fa_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7c3f8cfc61e808cd63156e7306bb96fa = L.geoJson(null, {
+                onEachFeature: geo_json_7c3f8cfc61e808cd63156e7306bb96fa_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_7c3f8cfc61e808cd63156e7306bb96fa_add (data) {
+            geo_json_7c3f8cfc61e808cd63156e7306bb96fa
+                .addData(data);
+        }
+            geo_json_7c3f8cfc61e808cd63156e7306bb96fa_add({"features": [{"geometry": {"coordinates": [-83.3, 31.3, 0.0], "type": "Point"}, "id": "16", "properties": {"Name": "0600 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eHU HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0600 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e31.3 N, -83.3 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e957 mb; 28.26 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e80 knots;  92 mph;  148 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_7c3f8cfc61e808cd63156e7306bb96fa.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_7c3f8cfc61e808cd63156e7306bb96fa.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_3cf5535b73db360a88f1fcdfea8d402c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3cf5535b73db360a88f1fcdfea8d402c = L.geoJson(null, {
+                onEachFeature: geo_json_3cf5535b73db360a88f1fcdfea8d402c_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_3cf5535b73db360a88f1fcdfea8d402c_add (data) {
+            geo_json_3cf5535b73db360a88f1fcdfea8d402c
+                .addData(data);
+        }
+            geo_json_3cf5535b73db360a88f1fcdfea8d402c_add({"features": [{"geometry": {"coordinates": [-83.1, 32.9, 0.0], "type": "Point"}, "id": "17", "properties": {"Name": "0900 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0900 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e32.9 N, -83.1 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e967 mb; 28.55 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e60 knots;  69 mph;  111 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_3cf5535b73db360a88f1fcdfea8d402c.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_3cf5535b73db360a88f1fcdfea8d402c.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca = L.geoJson(null, {
+                onEachFeature: geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca_add (data) {
+            geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca
+                .addData(data);
+        }
+            geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca_add({"features": [{"geometry": {"coordinates": [-83.2, 34.4, 0.0], "type": "Point"}, "id": "18", "properties": {"Name": "1200 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eTS HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e34.4 N, -83.2 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e973 mb; 28.73 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e45 knots;  52 mph;  83 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_5dfab1e9e4baafd3ca2c25c951cf92ca.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_a64073bcaba3cea72b524a206c6d68e4_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a64073bcaba3cea72b524a206c6d68e4 = L.geoJson(null, {
+                onEachFeature: geo_json_a64073bcaba3cea72b524a206c6d68e4_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_a64073bcaba3cea72b524a206c6d68e4_add (data) {
+            geo_json_a64073bcaba3cea72b524a206c6d68e4
+                .addData(data);
+        }
+            geo_json_a64073bcaba3cea72b524a206c6d68e4_add({"features": [{"geometry": {"coordinates": [-84.9, 36.8, 0.0], "type": "Point"}, "id": "19", "properties": {"Name": "1800 UTC SEP 27", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eLO HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 27\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e36.8 N, -84.9 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e983 mb; 29.02 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e40 knots;  46 mph;  74 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_a64073bcaba3cea72b524a206c6d68e4.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_a64073bcaba3cea72b524a206c6d68e4.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_9e01a47fc67e2ad229fd692025efb0cd_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9e01a47fc67e2ad229fd692025efb0cd = L.geoJson(null, {
+                onEachFeature: geo_json_9e01a47fc67e2ad229fd692025efb0cd_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_9e01a47fc67e2ad229fd692025efb0cd_add (data) {
+            geo_json_9e01a47fc67e2ad229fd692025efb0cd
+                .addData(data);
+        }
+            geo_json_9e01a47fc67e2ad229fd692025efb0cd_add({"features": [{"geometry": {"coordinates": [-86.6, 38.1, 0.0], "type": "Point"}, "id": "20", "properties": {"Name": "0000 UTC SEP 28", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eLO HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0000 UTC SEP 28\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e38.1 N, -86.6 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e985 mb; 29.08 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e40 knots;  46 mph;  74 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_9e01a47fc67e2ad229fd692025efb0cd.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_9e01a47fc67e2ad229fd692025efb0cd.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_462d98f9fad87f88763ecaad7f21a5c0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_462d98f9fad87f88763ecaad7f21a5c0 = L.geoJson(null, {
+                onEachFeature: geo_json_462d98f9fad87f88763ecaad7f21a5c0_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_462d98f9fad87f88763ecaad7f21a5c0_add (data) {
+            geo_json_462d98f9fad87f88763ecaad7f21a5c0
+                .addData(data);
+        }
+            geo_json_462d98f9fad87f88763ecaad7f21a5c0_add({"features": [{"geometry": {"coordinates": [-88.1, 37.4, 0.0], "type": "Point"}, "id": "21", "properties": {"Name": "0600 UTC SEP 28", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eLO HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e0600 UTC SEP 28\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e37.4 N, -88.1 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e992 mb; 29.29 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e30 knots;  35 mph;  56 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_462d98f9fad87f88763ecaad7f21a5c0.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_462d98f9fad87f88763ecaad7f21a5c0.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea = L.geoJson(null, {
+                onEachFeature: geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea_add (data) {
+            geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea
+                .addData(data);
+        }
+            geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea_add({"features": [{"geometry": {"coordinates": [-87.6, 36.6, 0.0], "type": "Point"}, "id": "22", "properties": {"Name": "1200 UTC SEP 28", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eLO HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1200 UTC SEP 28\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e36.6 N, -87.6 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e997 mb; 29.44 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e25 knots;  29 mph;  46 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_2b7ce0b2ef44b0673ec7a0cb668b57ea.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+    
+
+        function geo_json_5410d4e18b6495754debac6bd4320c97_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5410d4e18b6495754debac6bd4320c97 = L.geoJson(null, {
+                onEachFeature: geo_json_5410d4e18b6495754debac6bd4320c97_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_5410d4e18b6495754debac6bd4320c97_add (data) {
+            geo_json_5410d4e18b6495754debac6bd4320c97
+                .addData(data);
+        }
+            geo_json_5410d4e18b6495754debac6bd4320c97_add({"features": [{"geometry": {"coordinates": [-87.0, 37.1, 0.0], "type": "Point"}, "id": "23", "properties": {"Name": "1800 UTC SEP 28", "altitudeMode": null, "begin": null, "description": "\n\t   \t  \u003ctable\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eLO HELENE (AL092024)\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e\u003chr\u003e\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1800 UTC SEP 28\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eStorm Location:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e \u003cB\u003e37.1 N, -87.0 W\u003c/B\u003e \u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMin Sea Level Pressure:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e1000 mb; 29.53 in Hg\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003eMaxium Intensity:\u003c/td\u003e\u003c/tr\u003e\n\t       \t\t\u003ctr\u003e\u003ctd\u003e20 knots;  23 mph;  37 kph\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\t       ", "drawOrder": null, "end": null, "extrude": 0, "icon": null, "id": null, "snippet": "empty", "tessellate": -1, "timestamp": null, "visibility": -1}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_5410d4e18b6495754debac6bd4320c97.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_5410d4e18b6495754debac6bd4320c97.addTo(map_d125008eeaa5a5d0b7e05295ad3acb48);
+        
+</script>
+</html>
