@@ -2,12 +2,15 @@ import pandas as pd
 import numpy as py
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
 
 
 def importData():
     # Read in datasetseverity
     df = pd.read_csv(
-        "C:\\Users\\battl\\Documents\\DataMining\\ClassProject\\Natural_Disaster_Stock_Market\\data\\complete_dataset.csv"
+        "C:\\Users\\battl\\Documents\\DataMining\\ClassProject\\Natural_Disaster_Stock_Market\\data\\sector_datasets\\conceptual_complete_dataset.csv"
     )
 
     df = df[
@@ -45,7 +48,7 @@ def importData():
 
 
 def runSVM(data):
-    model = SVC(kernel="linear")
+    model = SVC()
     X = data.drop(
         columns=[
             "industrials_prev_5d_classifier",
@@ -57,17 +60,43 @@ def runSVM(data):
 
     y = data["industrials_prev_5d_classifier"]
 
-    # Split data
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
+        X, y, test_size=0.2, random_state=42, stratify=y
     )
 
-    # Train SVM
-    model = SVC()
-    model.fit(X_train, y_train)
+    # Pipeline for scaling + SVM
+    pipeline = Pipeline([("scaler", StandardScaler()), ("svm", SVC())])
 
-    # Evaluate
-    print("Accuracy:", model.score(X_test, y_test))
+    # Parameters to test
+    param_grid = [
+        {"svm__kernel": ["linear"], "svm__C": [0.01, 0.1, 1, 10, 100]},
+        {
+            "svm__kernel": ["rbf"],
+            "svm__C": [0.01, 0.1, 1, 10, 100],
+            "svm__gamma": [0.001, 0.01, 0.1, 1, "scale"],
+        },
+        {
+            "svm__kernel": ["poly"],
+            "svm__C": [0.1, 1, 10],
+            "svm__gamma": ["scale", 0.01, 0.1],
+            "svm__degree": [2, 3, 4],
+        },
+    ]
+
+    # Grid search
+    grid = GridSearchCV(
+        pipeline, param_grid, cv=5, scoring="accuracy", n_jobs=-1, verbose=1
+    )
+
+    grid.fit(X_train, y_train)
+
+    # Best parameters
+    print("Best parameters:", grid.best_params_)
+    print("Best CV accuracy:", grid.best_score_)
+
+    # Evaluate on held-out test data
+    print("Test accuracy:", grid.score(X_test, y_test))
+
     return None
 
 
