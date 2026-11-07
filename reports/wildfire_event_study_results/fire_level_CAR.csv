@@ -1,0 +1,69 @@
+event_id,fire,sector,CAR
+1,Eaton & Palisades,Energy,0.051012102673907975
+1,Eaton & Palisades,Financials,0.0018118739911192434
+1,Eaton & Palisades,Industrials,0.03183271658090297
+1,Eaton & Palisades,Utilities,0.0004998137022598581
+2,Camp Fire,Energy,-0.04250195604379649
+2,Camp Fire,Financials,0.025143534833214076
+2,Camp Fire,Industrials,0.03066028063789455
+2,Camp Fire,Utilities,-0.04029663163156711
+3,Tubbs Fire,Energy,-0.02569540037254726
+3,Tubbs Fire,Financials,0.007449834759334025
+3,Tubbs Fire,Industrials,0.004328451525898096
+3,Tubbs Fire,Utilities,0.02016011749649444
+4,Lahaina,Energy,0.05036572840272589
+4,Lahaina,Financials,-0.004939932164536984
+4,Lahaina,Industrials,-0.007670590010154587
+4,Lahaina,Utilities,0.007386251488485974
+5,Woolsey Fire,Energy,-0.04250195604379649
+5,Woolsey Fire,Financials,0.025143534833214076
+5,Woolsey Fire,Industrials,0.03066028063789455
+5,Woolsey Fire,Utilities,-0.04029663163156711
+7,Atlas Fire,Energy,-0.02569540037254726
+7,Atlas Fire,Financials,0.007449834759334025
+7,Atlas Fire,Industrials,0.004328451525898096
+7,Atlas Fire,Utilities,0.02016011749649444
+8,Glass Fire,Energy,-0.07262427053493375
+8,Glass Fire,Financials,0.002616115502143067
+8,Glass Fire,Industrials,-0.01382858097837918
+8,Glass Fire,Utilities,0.03196820839395347
+9,Thomas Fire,Energy,-0.011183628336254709
+9,Thomas Fire,Financials,-0.011688091910733809
+9,Thomas Fire,Industrials,0.0005732523047343847
+9,Thomas Fire,Utilities,-0.039856148946256637
+10,CZU Lightning Complex,Energy,-0.12028290601379922
+10,CZU Lightning Complex,Financials,-0.03970008958275803
+10,CZU Lightning Complex,Industrials,-0.03116595475868503
+10,CZU Lightning Complex,Utilities,-0.044189750036285044
+11,Southern California Firestorm,Energy,0.015156610467629384
+11,Southern California Firestorm,Financials,0.003326387989099024
+11,Southern California Firestorm,Industrials,0.0033009913262694165
+11,Southern California Firestorm,Utilities,0.057761523967021555
+12,LNU Lightning Complex,Energy,-0.12028290601379922
+12,LNU Lightning Complex,Financials,-0.03970008958275803
+12,LNU Lightning Complex,Industrials,-0.03116595475868503
+12,LNU Lightning Complex,Utilities,-0.044189750036285044
+13,Valley Fire,Energy,-0.02063435952447013
+13,Valley Fire,Financials,-0.005287979882651979
+13,Valley Fire,Industrials,-0.01641766902641975
+13,Valley Fire,Utilities,0.056136988879140176
+14,Cedar Fire,Energy,-0.010236626487620281
+14,Cedar Fire,Financials,0.005903696841190164
+14,Cedar Fire,Industrials,0.019539696588553594
+14,Cedar Fire,Utilities,-0.014452658391670155
+16,Old Fire,Energy,-0.010236626487620281
+16,Old Fire,Financials,0.005903696841190164
+16,Old Fire,Industrials,0.019539696588553594
+16,Old Fire,Utilities,-0.014452658391670155
+17,Chimney Tops 2,Energy,0.015677353126385886
+17,Chimney Tops 2,Financials,0.01663790436527488
+17,Chimney Tops 2,Industrials,0.008967675470788562
+17,Chimney Tops 2,Utilities,0.01271000530734901
+19,Carr Fire,Energy,0.002283154225103945
+19,Carr Fire,Financials,-0.010592686449417566
+19,Carr Fire,Industrials,0.013693052150944665
+19,Carr Fire,Utilities,0.01355929752236301
+20,Dixie Fire,Energy,-0.10033670864528763
+20,Dixie Fire,Financials,-0.018175056082576038
+20,Dixie Fire,Industrials,-0.01179015844085719
+20,Dixie Fire,Utilities,0.01597140852745274

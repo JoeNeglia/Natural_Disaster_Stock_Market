@@ -1,0 +1,348 @@
+"""Wildfire event study: U.S. stock-market sector reactions.
+
+Place this file in the root of Natural_Disaster_Stock_Market, alongside:
+    SP500Last25Years/sp500_stocks.csv
+    SP500Last25Years/sp500_companies.csv
+    data/stock_data/market_raw.csv
+
+Run:
+    pip install pandas numpy scipy matplotlib
+    python wildfire_event_study.py
+
+The script uses the 20 wildfire entries supplied in the project discussion.
+Day 0 is the first market session on or after the listed start date.
+For grouped fires, this is an episode-level date, not necessarily the
+first date on which damage became financially material.
+
+All returns are in decimal units internally; plots/tables use percentages.
+"""
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+
+# --------------------------- SETTINGS ---------------------------
+ROOT = Path(__file__).resolve().parent
+STOCKS_CSV = ROOT / 'SP500Last25Years' / 'sp500_stocks.csv'
+COMPANIES_CSV = ROOT / 'SP500Last25Years' / 'sp500_companies.csv'
+MARKET_CSV = ROOT / 'data/stock_data/market_raw.csv'
+OUTPUT = ROOT / 'wildfire_event_study_results'
+
+SECTORS = ['Energy', 'Utilities', 'Financials', 'Industrials']
+ESTIMATION_START = -120  # 120 sessions before the fire
+ESTIMATION_END = -21     # stop 21 sessions before the fire
+EVENT_START = -5         # include pre-event reaction
+EVENT_END = 10          # 10 sessions after day 0
+MIN_ESTIMATION_DAYS = 80
+MIN_STOCKS_PER_SECTOR = 10
+
+# Fire names and start dates. These are the 20 entries in the supplied table.
+# Verify exact dates against incident records before publication, particularly
+# multi-fire complexes. You may change any event_date to a public-alert date.
+FIRE_EVENTS = [
+    ('Eaton & Palisades', '2025-01-07', 'California'),
+    ('Camp Fire', '2018-11-08', 'California'),
+    ('Tubbs Fire', '2017-10-08', 'California'),
+    ('Lahaina', '2023-08-08', 'Hawaii'),
+    ('Woolsey Fire', '2018-11-08', 'California'),
+    ('Tunnel/Oakland Hills', '1991-10-19', 'California'),
+    ('Atlas Fire', '2017-10-09', 'California'),
+    ('Glass Fire', '2020-09-27', 'California'),
+    ('Thomas Fire', '2017-12-04', 'California'),
+    ('CZU Lightning Complex', '2020-08-16', 'California'),
+    ('Southern California Firestorm', '2007-10-20', 'California'),
+    ('LNU Lightning Complex', '2020-08-17', 'California'),
+    ('Valley Fire', '2015-09-12', 'California'),
+    ('Cedar Fire', '2003-10-25', 'California'),
+    ('Cerro Grande', '2000-05-04', 'New Mexico'),
+    ('Old Fire', '2003-10-25', 'California'),
+    ('Chimney Tops 2', '2016-11-23', 'Tennessee'),
+    ('Laguna Beach Fire', '1993-10-27', 'California'),
+    ('Carr Fire', '2018-07-23', 'California'),
+    ('Dixie Fire', '2021-07-13', 'California'),
+]
+
+
+def load_events():
+    """Create a small, editable event table."""
+    events = pd.DataFrame(FIRE_EVENTS, columns=['fire', 'event_date', 'state'])
+    events['event_date'] = pd.to_datetime(events['event_date'])
+    events['event_id'] = np.arange(1, len(events) + 1)
+    return events
+
+
+def load_returns():
+    """Calculate daily stock returns, then equal-weight sector returns.
+
+    Stock-to-sector assignments come from the available company file. That
+    file may reflect current rather than historical S&P 500 membership.
+    This is a survivorship-bias limitation of the study.
+    """
+    companies = pd.read_csv(COMPANIES_CSV, usecols=['symbol', 'sector'])
+    companies = companies.drop_duplicates('symbol')
+    companies = companies[companies['sector'].isin(SECTORS)]
+    sector_map = companies.set_index('symbol')['sector']
+
+    # Read the large stock file in manageable chunks.
+    parts = []
+    for chunk in pd.read_csv(
+        STOCKS_CSV, usecols=['date', 'symbol', 'close'], chunksize=300_000
+    ):
+        selected = chunk[chunk['symbol'].isin(sector_map.index)]
+        if not selected.empty:
+            parts.append(selected.copy())
+    if not parts:
+        raise ValueError('No matching stocks found. Check company symbols.')
+
+    stocks = pd.concat(parts, ignore_index=True)
+    stocks['date'] = pd.to_datetime(stocks['date'], errors='coerce')
+    stocks['close'] = pd.to_numeric(stocks['close'], errors='coerce')
+    stocks = stocks.dropna(subset=['date', 'close'])
+    stocks = stocks[stocks['close'] > 0]
+    stocks = stocks.sort_values(['symbol', 'date'])
+    stocks = stocks.drop_duplicates(['symbol', 'date'], keep='last')
+
+    # Calculate close-to-close returns for each company separately.
+    prior_date = stocks.groupby('symbol')['date'].shift(1)
+    stocks['return'] = stocks.groupby('symbol')['close'].pct_change(
+        fill_method=None
+    )
+    # A long gap is not a one-day return.
+    stocks.loc[(stocks['date'] - prior_date).dt.days > 5, 'return'] = np.nan
+    stocks['return'] = stocks['return'].replace([np.inf, -np.inf], np.nan)
+    stocks['sector'] = stocks['symbol'].map(sector_map)
+
+    # Average available company returns within each sector, each day.
+    grouped = stocks.groupby(['date', 'sector'])['return'].agg(['mean', 'count'])
+    sector_return = grouped['mean'].unstack('sector')
+    sector_count = grouped['count'].unstack('sector')
+    sector_return = sector_return.where(sector_count >= MIN_STOCKS_PER_SECTOR)
+
+    # SPY is the market benchmark used to estimate normal sector returns.
+    market = pd.read_csv(MARKET_CSV, usecols=['Date', 'SPY_Close'])
+    market['Date'] = pd.to_datetime(market['Date'], errors='coerce')
+    market['SPY_Close'] = pd.to_numeric(market['SPY_Close'], errors='coerce')
+    market = market.dropna().sort_values('Date').drop_duplicates('Date')
+    market = market.set_index('Date')
+    market['SPY'] = market['SPY_Close'].pct_change(fill_method=None)
+
+    # Use the same trading-day index for all sector returns.
+    combined = sector_return.reindex(market.index)
+    combined['SPY'] = market['SPY']
+    return combined
+
+
+def run_event_study(events, returns):
+    """Fit a separate pre-fire market model for each fire and sector.
+
+    Expected sector return = alpha + beta * SPY daily return
+    Abnormal return = observed sector return - expected sector return
+    """
+    daily_rows = []
+    excluded = []
+
+    for event in events.itertuples(index=False):
+        # A weekend/holiday event maps to the next available trading session.
+        t0 = returns.index.searchsorted(event.event_date)
+        if t0 >= len(returns):
+            excluded.append((event.fire, 'No market sessions after event'))
+            continue
+        if (returns.index[t0] - event.event_date).days > 4:
+            excluded.append((event.fire, 'No nearby market session'))
+            continue
+        if t0 + ESTIMATION_START < 0 or t0 + EVENT_END >= len(returns):
+            excluded.append((event.fire, 'Insufficient market date coverage'))
+            continue
+
+        for sector in SECTORS:
+            estimation = returns.iloc[
+                t0 + ESTIMATION_START:t0 + ESTIMATION_END + 1
+            ][['SPY', sector]].dropna()
+            event_window = returns.iloc[
+                t0 + EVENT_START:t0 + EVENT_END + 1
+            ][['SPY', sector]]
+
+            if len(estimation) < MIN_ESTIMATION_DAYS:
+                excluded.append((event.fire, f'Insufficient {sector} estimation data'))
+                continue
+            if len(event_window) != EVENT_END - EVENT_START + 1 or event_window.isna().any().any():
+                excluded.append((event.fire, f'Incomplete {sector} event window'))
+                continue
+
+            x = estimation['SPY'].to_numpy()
+            y = estimation[sector].to_numpy()
+            market_variance = np.var(x, ddof=1)
+            if market_variance <= 0:
+                excluded.append((event.fire, f'Zero SPY variance: {sector}'))
+                continue
+
+            beta = np.cov(x, y, ddof=1)[0, 1] / market_variance
+            alpha = y.mean() - beta * x.mean()
+            expected = alpha + beta * event_window['SPY']
+            abnormal = event_window[sector] - expected
+
+            for relative_day, (date, value) in zip(
+                range(EVENT_START, EVENT_END + 1), abnormal.items()
+            ):
+                daily_rows.append({
+                    'event_id': event.event_id,
+                    'fire': event.fire,
+                    'state': event.state,
+                    'fire_start_date': event.event_date.date().isoformat(),
+                    'trading_date': date.date().isoformat(),
+                    'relative_day': relative_day,
+                    'sector': sector,
+                    'actual_return': event_window.loc[date, sector],
+                    'expected_return': expected.loc[date],
+                    'abnormal_return': value,
+                    'alpha': alpha,
+                    'beta': beta,
+                })
+
+    if not daily_rows:
+        raise RuntimeError('No usable events. Check dates and market coverage.')
+    return pd.DataFrame(daily_rows), pd.DataFrame(
+        excluded, columns=['fire', 'reason']
+    )
+
+
+def calculate_results(daily):
+    """Calculate CAR by fire, and mean CAR with basic significance tests.
+
+    CAR(0,+10) sums abnormal returns from event day through day +10.
+    CAAR(-5,t) is the average across fires of cumulative abnormal
+    returns starting at day -5. These are DIFFERENT windows.
+    """
+    post = daily[daily['relative_day'].between(0, 10)]
+    cars = post.groupby(['event_id', 'fire', 'sector'], as_index=False)[
+        'abnormal_return'
+    ].sum().rename(columns={'abnormal_return': 'CAR'})
+
+    rows = []
+    for sector in SECTORS:
+        values = cars.loc[cars['sector'] == sector, 'CAR'].to_numpy()
+        n = len(values)
+        mean = np.mean(values) if n else np.nan
+        sd = np.std(values, ddof=1) if n > 1 else np.nan
+        if n > 1 and sd > 0:
+            se = sd / np.sqrt(n)
+            t_stat = mean / se
+            p = 2 * stats.t.sf(abs(t_stat), n - 1)
+            margin = stats.t.ppf(0.975, n - 1) * se
+            lower, upper = mean - margin, mean + margin
+        else:
+            t_stat = p = lower = upper = np.nan
+        rows.append({
+            'sector': sector,
+            'n_fires': n,
+            'mean_CAR_pct': 100 * mean,
+            'CI_low_pct': 100 * lower,
+            'CI_high_pct': 100 * upper,
+            't_stat': t_stat,
+            'p_value_naive': p,
+            'positive_CAR_pct': 100 * np.mean(values > 0) if n else np.nan,
+        })
+
+    summary = pd.DataFrame(rows)
+    # Bonferroni adjustment for the four sector comparisons.
+    summary['p_value_bonferroni'] = np.minimum(
+        1, summary['p_value_naive'] * len(SECTORS)
+    )
+    return cars, summary
+
+
+def create_charts(daily, cars, summary):
+    """Save three report-ready figures as PNG files."""
+    # Figure 1: CAAR trajectories from day -5 to day +10.
+    aar = daily.groupby(['sector', 'relative_day'], as_index=False)[
+        'abnormal_return'
+    ].mean().sort_values(['sector', 'relative_day'])
+    aar['CAAR_pct'] = aar.groupby('sector')['abnormal_return'].cumsum() * 100
+    aar.to_csv(OUTPUT / 'daily_AAR_CAAR.csv', index=False)
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    for sector in SECTORS:
+        d = aar[aar['sector'] == sector]
+        ax.plot(d['relative_day'], d['CAAR_pct'], marker='o', label=sector)
+    ax.axvline(0, color='gray', linestyle='--', label='Fire start')
+    ax.axhline(0, color='black', linewidth=0.8)
+    ax.set(xlabel='Trading days relative to fire start',
+           ylabel='CAAR (%)', title='Wildfires: Cumulative Average Abnormal Returns')
+    ax.grid(alpha=0.25)
+    ax.legend()
+    fig.tight_layout()
+    fig.savefig(OUTPUT / 'wildfire_CAAR.png', dpi=200)
+    plt.close(fig)
+
+    # Figure 2: Mean CAR with 95% confidence intervals.
+    fig, ax = plt.subplots(figsize=(9, 5))
+    valid = summary.dropna(subset=['CI_low_pct', 'CI_high_pct'])
+    if not valid.empty:
+        lower = valid['mean_CAR_pct'] - valid['CI_low_pct']
+        upper = valid['CI_high_pct'] - valid['mean_CAR_pct']
+        ax.errorbar(valid['mean_CAR_pct'], valid['sector'],
+                    xerr=np.vstack([lower, upper]), fmt='o', capsize=5)
+    ax.axvline(0, color='gray', linestyle='--')
+    ax.set(xlabel='Mean CAR, days 0 to +10 (%)',
+           title='Wildfire Sector Returns with 95% Confidence Intervals')
+    ax.grid(axis='x', alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(OUTPUT / 'wildfire_sector_confidence_intervals.png', dpi=200)
+    plt.close(fig)
+
+    # Figure 3: Fire-by-sector CAR heatmap.
+    heat = cars.pivot(index='fire', columns='sector', values='CAR')
+    heat = heat.reindex(columns=SECTORS)
+    fig, ax = plt.subplots(figsize=(10, max(5, len(heat) * 0.4)))
+    values = heat.to_numpy() * 100
+    limit = max(1, np.nanmax(np.abs(values)))
+    image = ax.imshow(values, cmap='RdBu', vmin=-limit, vmax=limit, aspect='auto')
+    ax.set_xticks(range(len(SECTORS)), SECTORS)
+    ax.set_yticks(range(len(heat.index)), heat.index)
+    ax.set_title('Wildfire-Level CAR, Days 0 to +10 (%)')
+    fig.colorbar(image, ax=ax, label='CAR (%)')
+    fig.tight_layout()
+    fig.savefig(OUTPUT / 'wildfire_heatmap.png', dpi=200)
+    plt.close(fig)
+
+
+def main():
+    for path in [STOCKS_CSV, COMPANIES_CSV, MARKET_CSV]:
+        if not path.exists():
+            raise FileNotFoundError(f'Missing input: {path}')
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+
+    events = load_events()
+    events.to_csv(OUTPUT / 'wildfire_event_dates.csv', index=False)
+    print(f'Loaded {len(events)} wildfire entries.')
+
+    returns = load_returns()
+    print('Market data coverage:', returns.index.min().date(),
+          'to', returns.index.max().date())
+
+    daily, exclusions = run_event_study(events, returns)
+    cars, summary = calculate_results(daily)
+    create_charts(daily, cars, summary)
+
+    daily.to_csv(OUTPUT / 'daily_abnormal_returns.csv', index=False)
+    cars.to_csv(OUTPUT / 'fire_level_CAR.csv', index=False)
+    summary.to_csv(OUTPUT / 'statistical_summary.csv', index=False)
+    exclusions.to_csv(OUTPUT / 'excluded_events.csv', index=False)
+
+    print('\nRESULTS: mean CAR for days 0 to +10')
+    print(summary.round(3).to_string(index=False))
+    print('\nEvents with usable data:', cars['event_id'].nunique(),
+          'of', len(events))
+    if not exclusions.empty:
+        print('\nExcluded event-sector combinations:')
+        print(exclusions.to_string(index=False))
+    print('\nSaved results to:', OUTPUT)
+    print('\nCAUTION: The basic t-tests assume independent events. Several')
+    print('fires overlap in time; clustered inference or grouped episodes')
+    print('are recommended before making statistical significance claims.')
+
+
+if __name__ == '__main__':
+    main()
