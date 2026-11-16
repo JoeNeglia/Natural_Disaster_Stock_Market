@@ -1,0 +1,377 @@
+support,itemsets,length
+0.8738095238095238,Low_Damage,1
+0.7380952380952381,Short_Duration,1
+0.6738095238095239,"Low_Damage, Short_Duration",2
+0.5833333333333334,Major_Hurricane,1
+0.5666666666666667,Market_Previously_Up,1
+0.5523809523809524,Energy_Negative,1
+0.5333333333333333,Utilities_Negative,1
+0.5190476190476191,Industrials_Positive,1
+0.5119047619047619,Financials_Positive,1
+0.4928571428571429,"Low_Damage, Market_Previously_Up",2
+0.4880952380952381,Financials_Negative,1
+0.4857142857142857,"Low_Damage, Major_Hurricane",2
+0.48095238095238096,"Energy_Negative, Low_Damage",2
+0.48095238095238096,Industrials_Negative,1
+0.4666666666666667,Utilities_Positive,1
+0.45714285714285713,"Industrials_Positive, Low_Damage",2
+0.45476190476190476,"Low_Damage, Utilities_Negative",2
+0.44761904761904764,Energy_Positive,1
+0.44047619047619047,"Financials_Positive, Low_Damage",2
+0.43333333333333335,Market_Previously_Down,1
+0.43333333333333335,"Financials_Negative, Low_Damage",2
+0.42857142857142855,"Market_Previously_Up, Short_Duration",2
+0.4238095238095238,"Energy_Negative, Short_Duration",2
+0.41904761904761906,"Low_Damage, Utilities_Positive",2
+0.4166666666666667,"Industrials_Negative, Low_Damage",2
+0.4166666666666667,Category_1_2,1
+0.40476190476190477,"Category_4_5, Major_Hurricane",2
+0.40476190476190477,Category_4_5,1
+0.3976190476190476,"Low_Damage, Market_Previously_Up, Short_Duration",3
+0.39285714285714285,"Energy_Positive, Low_Damage",2
+0.3880952380952381,"Industrials_Positive, Short_Duration",2
+0.3880952380952381,"Category_1_2, Low_Damage",2
+0.38333333333333336,"Short_Duration, Utilities_Negative",2
+0.38095238095238093,"Energy_Negative, Low_Damage, Short_Duration",3
+0.38095238095238093,"Low_Damage, Market_Previously_Down",2
+0.37857142857142856,"Major_Hurricane, Short_Duration",2
+0.37142857142857144,"Financials_Negative, Short_Duration",2
+0.36666666666666664,"Financials_Positive, Short_Duration",2
+0.3595238095238095,"Category_1_2, Short_Duration",2
+0.3547619047619048,"Short_Duration, Utilities_Positive",2
+0.35,"Industrials_Positive, Low_Damage, Short_Duration",3
+0.35,"Industrials_Negative, Short_Duration",2
+0.3476190476190476,"Low_Damage, Short_Duration, Utilities_Negative",3
+0.34523809523809523,Low_VIX,1
+0.34285714285714286,"Financials_Negative, Low_Damage, Short_Duration",3
+0.3404761904761905,"Low_Damage, Major_Hurricane, Short_Duration",3
+0.3333333333333333,"Category_1_2, Low_Damage, Short_Duration",3
+0.33095238095238094,"Financials_Positive, Low_Damage, Short_Duration",3
+0.3261904761904762,"Low_Damage, Short_Duration, Utilities_Positive",3
+0.3238095238095238,"Industrials_Negative, Low_Damage, Short_Duration",3
+0.32142857142857145,"Category_4_5, Low_Damage, Major_Hurricane",3
+0.32142857142857145,"Category_4_5, Low_Damage",2
+0.3142857142857143,"Energy_Negative, Market_Previously_Up",2
+0.3142857142857143,"Market_Previously_Up, Utilities_Negative",2
+0.3142857142857143,"Energy_Positive, Short_Duration",2
+0.3119047619047619,"Major_Hurricane, Market_Previously_Up",2
+0.30952380952380953,"Market_Previously_Down, Short_Duration",2
+0.30238095238095236,"Energy_Negative, Industrials_Negative",2
+0.30238095238095236,"Industrials_Positive, Major_Hurricane",2
+0.30238095238095236,"Energy_Negative, Major_Hurricane",2
+0.3,"Industrials_Positive, Utilities_Negative",2
+0.3,"Financials_Positive, Major_Hurricane",2
+0.3,"Low_Damage, Low_VIX",2
+0.29523809523809524,"Major_Hurricane, Utilities_Positive",2
+0.29523809523809524,"Financials_Positive, Utilities_Negative",2
+0.29285714285714287,"Energy_Positive, Low_Damage, Short_Duration",3
+0.29285714285714287,"Energy_Negative, Utilities_Negative",2
+0.29285714285714287,"Financials_Positive, Industrials_Positive",2
+0.2904761904761905,"Energy_Negative, Financials_Negative",2
+0.28809523809523807,"Major_Hurricane, Utilities_Negative",2
+0.2857142857142857,"Financials_Positive, Market_Previously_Up",2
+0.2857142857142857,"Industrials_Positive, Market_Previously_Up",2
+0.2833333333333333,"Financials_Negative, Major_Hurricane",2
+0.28095238095238095,"Financials_Negative, Market_Previously_Up",2
+0.28095238095238095,"Industrials_Negative, Market_Previously_Up",2
+0.28095238095238095,"Energy_Positive, Major_Hurricane",2
+0.28095238095238095,"Industrials_Negative, Major_Hurricane",2
+0.2761904761904762,"Low_Damage, Market_Previously_Down, Short_Duration",3
+0.2714285714285714,"Major_Hurricane, Market_Previously_Down",2
+0.2714285714285714,"Energy_Negative, Low_Damage, Market_Previously_Up",3
+0.26904761904761904,"Energy_Positive, Industrials_Positive",2
+0.26666666666666666,"Low_Damage, Market_Previously_Up, Utilities_Negative",3
+0.2642857142857143,"Industrials_Positive, Low_Damage, Utilities_Negative",3
+0.2619047619047619,"Energy_Negative, Industrials_Negative, Low_Damage",3
+0.2619047619047619,Long_Duration,1
+0.2619047619047619,"Financials_Negative, Industrials_Negative",2
+0.2619047619047619,"Energy_Negative, Financials_Positive",2
+0.25952380952380955,"Energy_Negative, Utilities_Positive",2
+0.2571428571428571,"Energy_Negative, Financials_Negative, Low_Damage",3
+0.2571428571428571,"Low_Damage, Major_Hurricane, Utilities_Positive",3
+0.25476190476190474,"Industrials_Positive, Low_Damage, Market_Previously_Up",3
+0.25476190476190474,"Category_1_2, Market_Previously_Up",2
+0.25476190476190474,"Low_Damage, Major_Hurricane, Market_Previously_Up",3
+0.2523809523809524,"Industrials_Positive, Low_Damage, Major_Hurricane",3
+0.2523809523809524,"Energy_Negative, Low_Damage, Major_Hurricane",3
+0.2523809523809524,"Category_4_5, Major_Hurricane, Short_Duration",3
+0.2523809523809524,"Category_4_5, Short_Duration",2
+0.2523809523809524,"Energy_Positive, Market_Previously_Up",2
+0.2523809523809524,"Market_Previously_Up, Utilities_Positive",2
+0.25,Financials_High_Volatility,1
+0.25,Industrials_High_Volatility,1
+0.25,Utilities_High_Volatility,1
+0.25,"Energy_Positive, Financials_Positive",2
+0.25,"Financials_Negative, Utilities_Positive",2
+0.25,"Energy_Negative, Industrials_Positive",2
+0.25,"Financials_Positive, Low_Damage, Utilities_Negative",3
+0.25,Energy_High_Volatility,1
+0.25,"Category_1_2, Energy_Negative",2
+0.25,"Financials_Positive, Low_Damage, Market_Previously_Up",3
+0.24761904761904763,"Industrials_Negative, Utilities_Positive",2
+0.24761904761904763,"Energy_Negative, Low_Damage, Utilities_Negative",3
+0.24523809523809523,"Financials_Negative, Low_Damage, Major_Hurricane",3
+0.24523809523809523,"Financials_Positive, Industrials_Positive, Low_Damage",3
+0.24523809523809523,"Category_1_2, Utilities_Negative",2
+0.24285714285714285,"Financials_Negative, Low_Damage, Market_Previously_Up",3
+0.24047619047619048,"Energy_Positive, Utilities_Negative",2
+0.24047619047619048,"Financials_Positive, Low_Damage, Major_Hurricane",3
+0.24047619047619048,"Low_VIX, Short_Duration",2
+0.23809523809523808,"Category_1_2, Low_Damage, Market_Previously_Up",3
+0.23809523809523808,"Financials_Negative, Utilities_Negative",2
+0.23809523809523808,"Industrials_Negative, Low_Damage, Market_Previously_Up",3
+0.23809523809523808,"Energy_Negative, Market_Previously_Up, Short_Duration",3
+0.23809523809523808,"Energy_Negative, Market_Previously_Down",2
+0.23809523809523808,"Low_VIX, Market_Previously_Up",2
+0.23809523809523808,"Energy_Positive, Industrials_Positive, Low_Damage",3
+0.2357142857142857,"Category_4_5, Market_Previously_Up",2
+0.2357142857142857,"Category_4_5, Major_Hurricane, Market_Previously_Up",3
+0.23333333333333334,"Industrials_Positive, Market_Previously_Down",2
+0.23333333333333334,"Industrials_Positive, Market_Previously_Up, Short_Duration",3
+0.23333333333333334,"Energy_Positive, Low_Damage, Major_Hurricane",3
+0.23333333333333334,"Industrials_Negative, Low_Damage, Major_Hurricane",3
+0.23333333333333334,"Energy_Negative, Low_Damage, Utilities_Positive",3
+0.23333333333333334,"Industrials_Negative, Utilities_Negative",2
+0.23095238095238096,"Low_Damage, Major_Hurricane, Market_Previously_Down",3
+0.22857142857142856,"Category_1_2, Energy_Negative, Low_Damage",3
+0.22857142857142856,"Energy_Negative, Industrials_Negative, Short_Duration",3
+0.22857142857142856,"Low_Damage, Major_Hurricane, Utilities_Negative",3
+0.22857142857142856,"Financials_Negative, Low_Damage, Utilities_Positive",3
+0.2261904761904762,"Financials_Negative, Industrials_Positive",2
+0.2261904761904762,"Low_Damage, Market_Previously_Up, Utilities_Positive",3
+0.2261904761904762,"Financials_Positive, Market_Previously_Down",2
+0.2261904761904762,"Industrials_Negative, Low_Damage, Utilities_Positive",3
+0.2261904761904762,"Category_1_2, Low_Damage, Utilities_Negative",3
+0.22380952380952382,"Market_Previously_Up, Short_Duration, Utilities_Negative",3
+0.22380952380952382,"Energy_Negative, Financials_Negative, Short_Duration",3
+0.22380952380952382,"Low_Damage, Low_VIX, Short_Duration",3
+0.22380952380952382,"Energy_Negative, Financials_Positive, Low_Damage",3
+0.22142857142857142,"Financials_Negative, Industrials_Negative, Low_Damage",3
+0.22142857142857142,"Category_4_5, Utilities_Positive",2
+0.22142857142857142,"Energy_Negative, Energy_Strong_Negative",2
+0.22142857142857142,Energy_Strong_Negative,1
+0.22142857142857142,"Industrials_Positive, Short_Duration, Utilities_Negative",3
+0.22142857142857142,"Category_1_2, Energy_Negative, Short_Duration",3
+0.22142857142857142,"Category_4_5, Major_Hurricane, Utilities_Positive",3
+0.22142857142857142,"Energy_Positive, Low_Damage, Market_Previously_Up",3
+0.22142857142857142,"Category_4_5, Low_Damage, Short_Duration",3
+0.21904761904761905,"Market_Previously_Down, Utilities_Negative",2
+0.21904761904761905,"Industrials_Positive, Utilities_Positive",2
+0.21904761904761905,"Category_1_2, Market_Previously_Up, Short_Duration",3
+0.21904761904761905,"Financials_Positive, Industrials_Negative",2
+0.21904761904761905,"Low_VIX, Major_Hurricane",2
+0.21904761904761905,"Energy_Negative, Short_Duration, Utilities_Negative",3
+0.21904761904761905,"Energy_Negative, Industrials_Positive, Low_Damage",3
+0.21666666666666667,"Category_1_2, Industrials_Positive",2
+0.21666666666666667,"Energy_Positive, Financials_Positive, Low_Damage",3
+0.21666666666666667,"Financials_Positive, Market_Previously_Up, Short_Duration",3
+0.21666666666666667,"Financials_High_Volatility, Industrials_High_Volatility",2
+0.21666666666666667,"Financials_Positive, Utilities_Positive",2
+0.21428571428571427,"Category_4_5, Financials_Positive, Major_Hurricane",3
+0.21428571428571427,"Category_4_5, Financials_Positive",2
+0.21428571428571427,"Market_Previously_Down, Utilities_Positive",2
+0.2119047619047619,"Financials_High_Volatility, Low_Damage",2
+0.2119047619047619,"Financials_Negative, Industrials_Positive, Low_Damage",3
+0.2119047619047619,"Financials_Negative, Market_Previously_Up, Short_Duration",3
+0.2119047619047619,"Low_Damage, Utilities_High_Volatility",2
+0.2119047619047619,"Category_1_2, Financials_Positive",2
+0.2119047619047619,"Financials_Positive, Industrials_Positive, Short_Duration",3
+0.2119047619047619,"Category_4_5, Energy_Negative, Major_Hurricane",3
+0.2119047619047619,"Category_4_5, Energy_Negative",2
+0.2119047619047619,"Industrials_Positive, Low_VIX",2
+0.20952380952380953,High_VIX,1
+0.20952380952380953,"Energy_Negative, Low_Damage, Market_Previously_Down",3
+0.20952380952380953,"Energy_High_Volatility, Low_Damage",2
+0.20952380952380953,"Major_Hurricane, Market_Previously_Up, Short_Duration",3
+0.20714285714285716,"Category_4_5, Industrials_Negative, Major_Hurricane",3
+0.20714285714285716,"Category_1_2, Short_Duration, Utilities_Negative",3
+0.20714285714285716,"Industrials_High_Volatility, Low_Damage",2
+0.20714285714285716,"Energy_Positive, Utilities_Positive",2
+0.20714285714285716,"Financials_Negative, Market_Previously_Down",2
+0.20714285714285716,"Energy_Positive, Low_Damage, Utilities_Negative",3
+0.20714285714285716,"Category_4_5, Industrials_Negative",2
+0.20476190476190476,"Financials_Negative, Low_Damage, Utilities_Negative",3
+0.20476190476190476,"Category_1_2, Industrials_Positive, Low_Damage",3
+0.20476190476190476,"Market_Previously_Up, Short_Duration, Utilities_Positive",3
+0.20476190476190476,"Long_Duration, Major_Hurricane",2
+0.20476190476190476,"Energy_Negative, Short_Duration, Utilities_Positive",3
+0.20476190476190476,"Category_1_2, Financials_Negative",2
+0.20238095238095238,"Industrials_Positive, Low_Damage, Market_Previously_Down",3
+0.20238095238095238,"Major_Hurricane, Short_Duration, Utilities_Positive",3
+0.20238095238095238,"Energy_Negative, Major_Hurricane, Short_Duration",3
+0.20238095238095238,"Low_Damage, Low_VIX, Market_Previously_Up",3
+0.2,"Long_Duration, Low_Damage",2
+0.2,"Energy_Negative, Financials_Positive, Short_Duration",3
+0.2,"Financials_Negative, Major_Hurricane, Short_Duration",3
+0.2,"Category_1_2, Industrials_Negative",2
+0.2,"Category_1_2, Financials_Positive, Low_Damage",3
+0.2,"Industrials_Negative, Market_Previously_Down",2
+0.1976190476190476,"Energy_Positive, Financials_Negative",2
+0.1976190476190476,"Category_4_5, Industrials_Positive",2
+0.1976190476190476,"Category_4_5, Industrials_Positive, Major_Hurricane",3
+0.19523809523809524,"Industrials_Negative, Market_Previously_Up, Short_Duration",3
+0.19523809523809524,"Energy_Negative, Industrials_Positive, Short_Duration",3
+0.19523809523809524,"Financials_Negative, Industrials_Negative, Short_Duration",3
+0.19523809523809524,"Financials_Positive, Industrials_Negative, Low_Damage",3
+0.19523809523809524,"Energy_Positive, Market_Previously_Down",2
+0.19523809523809524,"Financials_Positive, Short_Duration, Utilities_Negative",3
+0.19523809523809524,"Industrials_Positive, Major_Hurricane, Short_Duration",3
+0.19285714285714287,"Industrials_Positive, Low_Damage, Utilities_Positive",3
+0.19285714285714287,"Category_4_5, Energy_Positive",2
+0.19285714285714287,"Low_Damage, Market_Previously_Down, Utilities_Positive",3
+0.19285714285714287,"Category_4_5, Energy_Positive, Major_Hurricane",3
+0.19285714285714287,"Category_1_2, Industrials_Positive, Short_Duration",3
+0.19285714285714287,"Energy_Positive, Industrials_Positive, Short_Duration",3
+0.19047619047619047,"Energy_High_Volatility, Short_Duration",2
+0.19047619047619047,"Industrials_Negative, Low_Damage, Utilities_Negative",3
+0.19047619047619047,"Financials_Positive, Low_Damage, Utilities_Positive",3
+0.19047619047619047,"Financials_Positive, Low_Damage, Market_Previously_Down",3
+0.19047619047619047,"Financials_Negative, Low_Damage, Market_Previously_Down",3
+0.19047619047619047,"Category_4_5, Financials_Negative",2
+0.19047619047619047,"Energy_Positive, Market_Previously_Up, Short_Duration",3
+0.19047619047619047,"Financials_Positive, Industrials_Positive, Utilities_Negative",3
+0.19047619047619047,"Industrials_Positive, Low_Damage, Low_VIX",3
+0.19047619047619047,"Category_4_5, Financials_Negative, Major_Hurricane",3
+0.19047619047619047,"Category_4_5, Low_Damage, Utilities_Positive",3
+0.1880952380952381,"Industrials_Negative, Short_Duration, Utilities_Positive",3
+0.1880952380952381,"Financials_Negative, Short_Duration, Utilities_Negative",3
+0.1880952380952381,"Category_1_2, Financials_Positive, Short_Duration",3
+0.1880952380952381,"Low_Damage, Market_Previously_Down, Utilities_Negative",3
+0.1880952380952381,"Category_1_2, Financials_Negative, Low_Damage",3
+0.18571428571428572,"Category_4_5, Low_Damage, Market_Previously_Up",3
+0.18571428571428572,"Energy_Strong_Negative, Low_Damage",2
+0.18571428571428572,"Energy_Positive, Low_Damage, Utilities_Positive",3
+0.18571428571428572,"Energy_Negative, Energy_Strong_Negative, Low_Damage",3
+0.18571428571428572,Utilities_Strong_Negative,1
+0.18571428571428572,"Energy_Negative, Market_Previously_Down, Short_Duration",3
+0.18571428571428572,"Utilities_Negative, Utilities_Strong_Negative",2
+0.18333333333333332,"Financials_Negative, Short_Duration, Utilities_Positive",3
+0.18333333333333332,"Category_4_5, Major_Hurricane, Utilities_Negative",3
+0.18333333333333332,"Short_Duration, Utilities_High_Volatility",2
+0.18333333333333332,"Low_VIX, Utilities_Negative",2
+0.18333333333333332,"Category_1_2, Industrials_Negative, Low_Damage",3
+0.18333333333333332,"Industrials_High_Volatility, Short_Duration",2
+0.18333333333333332,"Category_4_5, Utilities_Negative",2
+0.18333333333333332,"Industrials_Negative, Major_Hurricane, Short_Duration",3
+0.18333333333333332,"Low_Damage, Low_VIX, Major_Hurricane",3
+0.18095238095238095,"Financials_Positive, Low_VIX",2
+0.18095238095238095,"Energy_Negative, Industrials_Negative, Market_Previously_Up",3
+0.18095238095238095,"Financials_High_Volatility, Short_Duration",2
+0.17857142857142858,"High_VIX, Low_Damage",2
+0.17857142857142858,"Energy_Negative, Market_Previously_Up, Utilities_Negative",3
+0.17857142857142858,"Financials_Positive, Major_Hurricane, Short_Duration",3
+0.17857142857142858,"Industrials_Negative, Low_Damage, Market_Previously_Down",3
+0.17857142857142858,"Financials_High_Volatility, Industrials_High_Volatility, Low_Damage",3
+0.17857142857142858,"Energy_Positive, Industrials_Negative",2
+0.1761904761904762,"Financials_Negative, Industrials_Positive, Short_Duration",3
+0.1761904761904762,"Financials_High_Volatility, Utilities_High_Volatility",2
+0.1761904761904762,"Energy_Positive, Major_Hurricane, Short_Duration",3
+0.1761904761904762,"Major_Hurricane, Short_Duration, Utilities_Negative",3
+0.1761904761904762,"Financials_Positive, Industrials_Positive, Major_Hurricane",3
+0.1761904761904762,"Energy_Negative, Low_VIX",2
+0.1761904761904762,"Energy_Positive, Financials_Negative, Low_Damage",3
+0.1738095238095238,"Energy_Negative, Financials_Negative, Market_Previously_Up",3
+0.1738095238095238,Energy_Strong_Positive,1
+0.1738095238095238,"Energy_Positive, Energy_Strong_Positive",2
+0.17142857142857143,"Energy_Positive, Industrials_Positive, Utilities_Negative",3
+0.17142857142857143,"Energy_Positive, Financials_Positive, Industrials_Positive",3
+0.17142857142857143,"Category_1_2, Financials_Negative, Short_Duration",3
+0.17142857142857143,"Category_1_2, Utilities_Positive",2
+0.17142857142857143,"Financials_Positive, Short_Duration, Utilities_Positive",3
+0.17142857142857143,"Energy_Positive, Low_Damage, Market_Previously_Down",3
+0.17142857142857143,"Energy_Negative, Major_Hurricane, Market_Previously_Up",3
+0.16904761904761906,"Energy_High_Volatility, Low_Damage, Short_Duration",3
+0.16904761904761906,"Energy_Positive, Low_VIX",2
+0.16904761904761906,"Financials_Positive, Major_Hurricane, Utilities_Negative",3
+0.16904761904761906,"Energy_High_Volatility, Industrials_High_Volatility",2
+0.16904761904761906,"Category_4_5, Major_Hurricane, Market_Previously_Down",3
+0.16904761904761906,"Industrials_Positive, Major_Hurricane, Utilities_Negative",3
+0.16904761904761906,"Major_Hurricane, Market_Previously_Down, Short_Duration",3
+0.16904761904761906,"Category_4_5, Market_Previously_Down",2
+0.16666666666666666,"Energy_Positive, Financials_Positive, Short_Duration",3
+0.16666666666666666,"Category_4_5, Energy_Negative, Low_Damage",3
+0.16666666666666666,"Energy_Positive, Industrials_Positive, Major_Hurricane",3
+0.16666666666666666,"Category_1_2, Energy_Positive",2
+0.16666666666666666,"Industrials_Positive, Short_Duration, Utilities_Positive",3
+0.16666666666666666,"Category_1_2, Industrials_Negative, Short_Duration",3
+0.16666666666666666,"Energy_Negative, Industrials_Negative, Major_Hurricane",3
+0.16428571428571428,"Energy_Positive, Short_Duration, Utilities_Negative",3
+0.16428571428571428,"Category_1_2, Market_Previously_Up, Utilities_Negative",3
+0.16428571428571428,"Financials_Negative, Major_Hurricane, Utilities_Positive",3
+0.16428571428571428,"Financials_Negative, Low_VIX",2
+0.16428571428571428,"Financials_Positive, Market_Previously_Up, Utilities_Negative",3
+0.16428571428571428,"Energy_Negative, Industrials_Negative, Utilities_Negative",3
+0.1619047619047619,"Energy_Negative, Financials_Negative, Industrials_Negative",3
+0.1619047619047619,"Industrials_Negative, Short_Duration, Utilities_Negative",3
+0.1619047619047619,"Low_VIX, Market_Previously_Up, Short_Duration",3
+0.1619047619047619,"Energy_Strong_Negative, Short_Duration",2
+0.1619047619047619,"Low_Damage, Short_Duration, Utilities_High_Volatility",3
+0.1619047619047619,"Financials_High_Volatility, Low_Damage, Short_Duration",3
+0.1619047619047619,"Industrials_High_Volatility, Low_Damage, Short_Duration",3
+0.1619047619047619,"Category_1_2, Low_Damage, Utilities_Positive",3
+0.1619047619047619,"Industrials_Negative, Major_Hurricane, Utilities_Positive",3
+0.1619047619047619,"Energy_Negative, Energy_Strong_Negative, Short_Duration",3
+0.1619047619047619,"Energy_Negative, Financials_Negative, Major_Hurricane",3
+0.1619047619047619,"Major_Hurricane, Market_Previously_Up, Utilities_Positive",3
+0.1619047619047619,"Category_4_5, Industrials_Positive, Low_Damage",3
+0.1619047619047619,"Category_4_5, Financials_Positive, Low_Damage",3
+0.1619047619047619,"Energy_Negative, Financials_Positive, Utilities_Negative",3
+0.1619047619047619,"Category_1_2, Market_Previously_Down",2
+0.1619047619047619,"Low_VIX, Utilities_Positive",2
+0.1619047619047619,"Energy_High_Volatility, Financials_High_Volatility",2
+0.1619047619047619,"High_VIX, Industrials_High_Volatility",2
+0.1619047619047619,"Industrials_Positive, Market_Previously_Up, Utilities_Negative",3
+0.1595238095238095,"Industrials_Positive, Major_Hurricane, Market_Previously_Up",3
+0.1595238095238095,"Category_4_5, Industrials_Negative, Low_Damage",3
+0.1595238095238095,"Energy_Positive, Financials_Positive, Major_Hurricane",3
+0.1595238095238095,Utilities_Strong_Positive,1
+0.1595238095238095,"Financials_Positive, Industrials_Positive, Market_Previously_Up",3
+0.1595238095238095,"Category_4_5, Low_VIX",2
+0.1595238095238095,"Energy_Negative, Financials_Negative, Utilities_Positive",3
+0.1595238095238095,"Category_4_5, Low_VIX, Major_Hurricane",3
+0.1595238095238095,"Industrials_High_Volatility, Utilities_High_Volatility",2
+0.1595238095238095,"Industrials_High_Volatility, Utilities_Negative",2
+0.1595238095238095,"Market_Previously_Down, Short_Duration, Utilities_Negative",3
+0.1595238095238095,"Financials_Negative, Market_Previously_Down, Short_Duration",3
+0.1595238095238095,"Category_1_2, Energy_Positive, Low_Damage",3
+0.1595238095238095,"Category_4_5, Financials_Negative, Low_Damage",3
+0.1595238095238095,"Utilities_Positive, Utilities_Strong_Positive",2
+0.15714285714285714,"Financials_Positive, Low_Damage, Low_VIX",3
+0.15714285714285714,"Energy_Negative, Industrials_High_Volatility",2
+0.15714285714285714,"Financials_High_Volatility, Industrials_High_Volatility, Short_Duration",3
+0.15714285714285714,"Low_Damage, Utilities_Negative, Utilities_Strong_Negative",3
+0.15714285714285714,"Financials_Negative, Industrials_Negative, Major_Hurricane",3
+0.15714285714285714,"Low_Damage, Low_VIX, Utilities_Negative",3
+0.15714285714285714,"Energy_Negative, Major_Hurricane, Utilities_Positive",3
+0.15714285714285714,"Financials_Negative, Major_Hurricane, Market_Previously_Up",3
+0.15714285714285714,"Low_Damage, Utilities_Strong_Negative",2
+0.15476190476190477,"Financials_Positive, Industrials_Negative, Short_Duration",3
+0.15476190476190477,"Category_4_5, Energy_Positive, Low_Damage",3
+0.15476190476190477,"Financials_Positive, Major_Hurricane, Market_Previously_Up",3
+0.15476190476190477,"Energy_High_Volatility, Financials_High_Volatility, Industrials_High_Volatility",3
+0.15476190476190477,"Financials_Negative, Industrials_Negative, Market_Previously_Up",3
+0.15476190476190477,"Energy_High_Volatility, Energy_Negative",2
+0.15476190476190477,"Energy_Positive, Industrials_Negative, Low_Damage",3
+0.15476190476190477,"Industrials_Positive, Market_Previously_Down, Short_Duration",3
+0.15476190476190477,"Industrials_Negative, Market_Previously_Down, Short_Duration",3
+0.1523809523809524,"Energy_Positive, Industrials_Positive, Market_Previously_Up",3
+0.1523809523809524,"Financials_High_Volatility, High_VIX",2
+0.1523809523809524,"Energy_Negative, Low_Damage, Low_VIX",3
+0.1523809523809524,"Industrials_Negative, Major_Hurricane, Market_Previously_Up",3
+0.1523809523809524,"Category_1_2, Short_Duration, Utilities_Positive",3
+0.1523809523809524,"Financials_High_Volatility, Industrials_High_Volatility, Utilities_High_Volatility",3
+0.1523809523809524,"Category_4_5, Long_Duration",2
+0.1523809523809524,"Category_4_5, Long_Duration, Major_Hurricane",3
+0.1523809523809524,"Industrials_Negative, Market_Previously_Up, Utilities_Negative",3
+0.15,"Market_Previously_Down, Short_Duration, Utilities_Positive",3
+0.15,"Financials_Positive, Market_Previously_Down, Short_Duration",3
+0.15,"Category_4_5, Short_Duration, Utilities_Positive",3
+0.15,"Category_1_2, Low_Damage, Market_Previously_Down",3
+0.15,"Major_Hurricane, Market_Previously_Up, Utilities_Negative",3
+0.15,"Energy_Positive, Short_Duration, Utilities_Positive",3
+0.15,"Financials_Negative, Market_Previously_Up, Utilities_Negative",3
+0.15,"Energy_High_Volatility, Utilities_High_Volatility",2
+0.15,"Financials_High_Volatility, Major_Hurricane",2
+0.15,"Energy_High_Volatility, High_VIX",2
+0.15,"Long_Duration, Utilities_Negative",2
+0.15,"Industrials_Positive, Low_VIX, Short_Duration",3
